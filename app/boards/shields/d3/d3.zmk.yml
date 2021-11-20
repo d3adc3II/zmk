@@ -1,0 +1,14 @@
+file_format: "1"
+id: d3
+name: d3
+type: shield
+url: https://github.com/foostan/crkbd/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+siblings:
+  - d3_left
+  - d3_right

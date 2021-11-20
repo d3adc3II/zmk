@@ -1,0 +1,5 @@
+west build -d build/d3_left -b mikoto_520 -- -DSHIELD=d3_left
+west build -d build/d3_right -b mikoto_520 -- -DSHIELD=d3_right
+
+west build -b mikoto_520 -- -DSHIELD=d3_left -DZMK_CONFIG="C:/Users/phong/zmk-config/config"
+west build -b mikoto_520 -- -DSHIELD=d3-right -DZMK_CONFIG="C:/Users/phong/zmk-config/config"
