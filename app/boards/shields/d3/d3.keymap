@@ -6,6 +6,7 @@
 #define NAV   1
 #define NUM   2
 #define SYM   3
+#define MOUSE   4
 
 / {
         behaviors {
@@ -28,7 +29,7 @@
    &none &hm LGUI Q &hm LALT W &hm LCTRL E &hm LSHIFT R &kp T           &kp Y &hm LSHIFT U  &hm LCTRL I     &hm LALT O   &hm LGUI P &none
    &none &kp A      &kp S      &kp D       &kp F        &kp G           &kp H &kp J         &kp K           &kp L        &kp SEMI   &none
    &none &kp Z      &kp X      &kp C       &kp V        &kp B           &kp N &kp M         &kp COMMA       &kp DOT      &kp FSLH   &none
-                         &lt SYM ESC    &lt NAV SPACE &kp TAB           &none &kp RSHIFT &lt NUM DEL
+                         &lt SYM ESC    &lt NAV SPACE &lt MOUSE TAB           &none &kp RSHIFT &lt NUM DEL
                         >;
                 };
                 nav {
@@ -37,7 +38,7 @@
    &none &kp LPAR  &kp RPAR  &none     &trans     &trans                      &trans &kp HOME  &kp UP   &kp END   &trans &none
    &none &kp LBRC  &kp RBRC  &kp LC(C) &kp LC(V)  &kp LG(LC(LEFT))            &trans &kp LEFT  &kp DOWN &kp RIGHT &trans &none
    &none &kp LBKT  &kp RBKT  &trans    &kp LC(Z)  &kp LG(LC(RIGHT))           &trans &trans    &trans   &trans    &trans &none
-                                &trans     &trans     &trans            &trans  &trans   &trans
+                                &trans     &trans     &trans            &trans  &kp LBRC  &kp RBRC
                         >;                         
                 };                          
                 num {
@@ -54,10 +55,19 @@
                         bindings = <
    &none &kp APOS &trans    &kp EXCL  &trans   &trans      &trans    &kp UNDER &kp PIPE &trans  &kp PRCNT &none
    &none &kp AT   &kp ASTRK &kp DLLR  &none    &none       &kp MINUS &kp HASH  &trans   &trans  &trans    &none
-   &none &kp DQT   &trans    &trans    &kp AMPS &trans      &kp TILDE    &trans    &trans   &trans  &kp BSLH  &none
-                         &trans     &trans     &trans      &trans  &trans   &trans
+   &none &kp DQT   &trans    &trans   &kp AMPS &trans      &kp TILDE &trans    &trans   &trans  &kp BSLH  &none
+                         &trans     &trans     &trans      &trans  &kp LPAR  &kp RPAR
                         >;
-                };                              
+                };
+                mouse {
+
+                        bindings = <
+   &none &trans   &trans   &trans  &trans &trans &trans &trans &trans &trans &trans &none
+   &none &trans   &trans   &trans  &trans &trans &trans &trans &trans &trans &trans &none
+   &none &trans   &trans   &trans  &trans &trans &trans &trans &trans &trans &trans &none
+                         &trans     &trans     &trans      &trans  &kp LBKT  &kp RBKT
+                        >;
+                };                                                
         };
 
         combos {
